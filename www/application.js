@@ -150,6 +150,7 @@
 		function PhonegapApp() {
 			_classCallCheck(this, PhonegapApp);
 
+			console.log("before deviceready....");
 			if (typeof cordova !== 'undefined' || typeof phonegap !== 'undefined') {
 				document.addEventListener('deviceready', this.onDeviceReady, false);
 			} else {
@@ -160,7 +161,7 @@
 		_createClass(PhonegapApp, [{
 			key: "onDeviceReady",
 			value: function onDeviceReady() {
-
+				console.log("DeviceReady....");
 				window.fbAsyncInit = function () {
 					FB.init({
 						appId: '1951030151789466',
