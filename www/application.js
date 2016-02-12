@@ -24519,7 +24519,7 @@
 	  _createClass(API, null, [{
 	    key: "setSystem",
 	    value: function setSystem(system) {
-	      var _storage = JSON.parse(global.localStorage.getItem("systems"));
+	      var _storage = JSON.parse(global.localStorage.getItem("systems") || '[]');
 
 	      if (system.id) {
 	        for (var _idx in _storage) {
