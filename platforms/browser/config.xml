@@ -1,8 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.azati.esb" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>ES Builder</name>
     <description>A Expert System Builder (objects/properties styled)</description>
-    <author email="mob.dev@azati.com" href="azati.com">Azati corp.</author>
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
         <string>100</string>
     </gap:config-file>
@@ -58,4 +56,12 @@
     </gap:config-file>
     <access origin="*" />
     <allow-navigation href="*" />
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <name>ES Builder</name>
+    <description>
+        An example for phonegap build docs.
+    </description>
+    <author email="mob.dev@azati.com" href="azati.com">Azati corp.</author>
 </widget>
