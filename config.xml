@@ -12,6 +12,7 @@
     </description>
 
     <author email="mob.dev@azati.com" href="azati.com">Azati corp.</author>
-    <feature name="http://api.phonegap.com/1.0/device" />
+    <plugin name="cordova-plugin-device" />
+
 
 </widget>
