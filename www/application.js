@@ -151,15 +151,34 @@
 			_classCallCheck(this, PhonegapApp);
 
 			if (typeof cordova !== 'undefined' || typeof phonegap !== 'undefined') {
-				document.addEventListener('deviceready', this.onDeviceReady, false);
+				//document.addEventListener('deviceready', this.onDeviceReady, false);
+				document.addEventListener('deviceready', this.receivedEvent, false);
 			} else {
-				window.onload = this.onDeviceReady();
+				//window.onload = this.onDeviceReady();
+				window.onload = this.receivedEvent();
 			}
 		}
 
+		//	onDeviceReady() {
+		//		this.receivedEvent('deviceready');
+
+		//		window.fbAsyncInit = function() {
+		//			FB.init({
+		//				appId      : '1951030151789466',
+		//				cookie     : true,  // enable cookies to allow the server to access
+		// the session
+		//				xfbml      : true,  // parse social plugins on this page
+		//				version    : 'v2.5'
+		//			});
+
+		//		this.receivedEvent('deviceready');
+		//		}.bind(this);
+		//	}
+
 		_createClass(PhonegapApp, [{
-			key: "onDeviceReady",
-			value: function onDeviceReady() {
+			key: "receivedEvent",
+			value: function receivedEvent() {
+
 				window.fbAsyncInit = function () {
 					FB.init({
 						appId: '1951030151789466',
@@ -169,12 +188,9 @@
 						version: 'v2.5'
 					});
 
-					this.receivedEvent('deviceready');
+					//			this.receivedEvent('deviceready');
 				}.bind(this);
-			}
-		}, {
-			key: "receivedEvent",
-			value: function receivedEvent() {
+
 				(0, _reactDom.render)(_react2.default.createElement(
 					_reactRouter.Router,
 					null,
